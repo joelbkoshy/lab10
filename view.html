@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All transactions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div ng-controller="MyController">
+        <section id="tableSection" class="container mt-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="bg-primary">
+                        <th scope="col">User Id</th>
+                        <th scope="col">Service Id</th>
+                        <th scope="col">Service Vehicle</th>
+                        <th scope="col">Service Type</th>
+                        <th scope="col">Service Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in datas">
+                        <td scope="row">{{data.user_id}}</td>
+                        <td>{{data.service_id }}</td>
+                        <td>{{data.service_vehicle| uppercase}}</td>
+                        <td>{{data.service_type| uppercase}}</td>
+                        <td>{{data.service_status| uppercase}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>

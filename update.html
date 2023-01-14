@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+
+<body>
+    <br> <br>
+    <div class="container">
+        <form ng-submit="updateEntry()">
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="service_id" class="form-label">Service Id</label>
+                        <select class="form-select form-select-lg" ng-model="service_id" id="" required ng-options="data.service_id for data in datas" ng-change="getId()">
+                            <option selected disabled value="">Select one</option>
+                        </select>
+                    </div>
+                    <div class="offset-md-1 col-md-7">
+                        <label for="user_id" class="form-label">User Id</label>
+                        <input type="number" ng-model="user_id" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="row">
+                    <div class="offset-md-1 col-md-7">
+                        <label for="service_vehicle" class="form-label">Service Vehicle</label>
+                        <input type="text" ng-model="service_vehicle" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="service_type" class="form-label">Service Type</label>
+                        <input type="text" ng-model="service_type" class="form-control" required>
+                    </div>
+                    <div class="offset-md-1 col-md-7">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Service Status</label>
+                            <select class="form-select form-select-lg" ng-model="service_status" id="service_status" required>
+                                <option selected disabled value="">Select one</option>
+                                <option value="Not Started">Not Started</option>
+                                <option value="Started">Started</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 d-flex justify-content-center">
+                <input type="submit" value="Update" class="btn btn-secondary">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
